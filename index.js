@@ -160,9 +160,9 @@ module.exports = {
       }
       // Rule set KJ
       else if (letter === 'K' && word[i+1] === 'J') {
-        if (i-1 === 0) {
+        //if (i-1 === 0) {
           coding += '+'
-        }
+        //}
       }
       // Rule set L
       else if (letter === 'L') {

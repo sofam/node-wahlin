@@ -77,8 +77,8 @@ describe("encode() K rules", function () {
 })
 
 describe("encode() KJ rules", function () {
-  it('Encodes Skjut to S+UT', function () {
-    assert.equal('S+JUT',wahlin.encode('Skjut'))
+  it('Encodes skalkeskjulet to SKALKES+JULET', function () {
+    assert.equal('SKALKES+JULET',wahlin.encode('skalkeskjulet'))
   })
 })
 

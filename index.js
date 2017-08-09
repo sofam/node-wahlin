@@ -42,9 +42,39 @@ module.exports = {
       }
       // Rule set D
       if (letter === 'D') {
-        if (word[i+1] === 'J' || word[i+1] === T) {
+        if (word[i+1] === 'J' || word[i+1] === 'T') {
           continue
+        } else {
+          coding += letter
         }
+      }
+      // Rule set F
+      if (letter === 'F') {
+        if((word[i-1] === 'A' ||
+          word[i-1] === 'E'  ||
+          word[i-1] === 'I'  ||
+          word[i-1] === 'O'  ||
+          word[i-1] === 'U'  ||
+          word[i-1] === 'Y'  ||
+          word[i-1] === 'Å'  ||
+          word[i-1] === 'F'  ||
+          word[i-1] === 'L'  ||
+          word[i-1] === 'R') ||
+          (i === 0            ||
+          word[i+1] === 'B'  ||
+          word[i+1] === 'C'  ||
+          word[i+1] === 'D'  ||
+          word[i+1] === 'G'  ||
+          word[i+1] === 'H'  ||
+          word[i+1] === 'K'  ||
+          word[i+1] === 'M'  ||
+          word[i+1] === 'N'  ||
+          word[i+1] === 'P'  ||
+          word[i+1] === 'S'  ||
+          word[i+1] === 'V')
+        ) {
+          coding += 'V'
+        } 
       }
     }
 

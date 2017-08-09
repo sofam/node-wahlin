@@ -47,8 +47,8 @@ describe("encode() G rules", function () {
 })
 
 describe("encode() H rules", function () {
-  it('Encodes Ath to AT', function () {
-    assert.equal('AT',wahlin.encode('Ath'))
+  it('Encodes Hand to HAND', function () {
+    assert.equal('HAND',wahlin.encode('Hand'))
   })
   it('Encodes HA to A', function () {
     assert.equal('A',wahlin.encode('HA'))
@@ -71,7 +71,7 @@ describe("encode() I rules", function () {
 })
 
 describe("encode() K rules", function () {
-  it('Encodes Skita to *+ITA', function () {
+  it('Encodes Skita to *ITA', function () {
     assert.equal('*ITA',wahlin.encode('Skita'))
   })
 })
@@ -122,4 +122,54 @@ describe("encode() SJ, SCH, STJ, SKJ, SKÖ, SKE, SKI, SKY rules", function () {
   it('Encodes Schema to *EMA', function () {
     assert.equal('*EMA',wahlin.encode('Schema'))
   })
+  it('Encodes Skjut to *UT', function () {
+    assert.equal('*UT',wahlin.encode('Skjut'))
+  })
 })
+
+describe("encode() TJ rules", function () {
+  it('Encodes Tjuven to +UVEN', function () {
+    assert.equal('+UVEN',wahlin.encode('Tjuven'))
+  })
+})
+
+describe("encode() U rules", function () {
+  it('Encodes Moussera to MOSSERA', function () {
+    assert.equal('MOSSERA',wahlin.encode('Moussera'))
+  })
+})
+
+describe("encode() W rules", function () {
+  it('Encodes Wikström to VIKSTRÖM', function () {
+    assert.equal('VIKSTRÖM',wahlin.encode('Wikström'))
+  })
+})
+
+describe("encode() X rules", function () {
+  it('Encodes Alexander to ALEKSANDER', function () {
+    assert.equal('ALEKSANDER',wahlin.encode('Alexander'))
+  })
+})
+
+describe("encode() Y rules", function () {
+  it('Encodes Ay to AJ', function () {
+    assert.equal('AJ',wahlin.encode('Ay'))
+  })
+})
+
+describe("encode() Z rules", function () {
+  it('Encodes Zebra to SEBRA', function () {
+    assert.equal('SEBRA',wahlin.encode('Zebra'))
+  })
+})
+
+describe("encode() Å rules", function () {
+  it('Encodes Ångpanna to ONGPANNA', function () {
+    assert.equal('ONGPANNA',wahlin.encode('Ångpanna'))
+  })
+  it('Encodes Håv to HOV', function () {
+    assert.equal('HOV',wahlin.encode('HÅV')) // Broken test, needs to work, unsure if HOV is correct
+  })
+})
+
+

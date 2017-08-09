@@ -233,6 +233,7 @@ module.exports = {
       // Rule set TJ
       else if (letter === 'T' && word[i+1] === 'J' && i === 0) {
         coding += '+'
+        i += 1
       }
       // Rule set U
       else if (letter === 'U' && word[i-1] === 'O') {

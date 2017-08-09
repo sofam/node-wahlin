@@ -1,0 +1,11 @@
+{
+  "name": "node-wahlin",
+  "version": "1.0.0",
+  "description": "Wåhlin phonetics generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oscar Elfving",
+  "license": "ISC"
+}

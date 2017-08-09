@@ -3,6 +3,7 @@
 module.exports = {
   // Wåhlin encode word
   encode: function(word) {
+    const consonants = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Z']
     word = word.toUpperCase()
     var coding = ''
     for(var i = 0; i < word.length; i++) {
@@ -12,9 +13,12 @@ module.exports = {
         if(word[i+1] === 'E') {
           continue
         }
+        else {
+          coding += letter
+        }
       }
       // Rule set C
-      if (letter === 'C' && word[i+1] !== 'H') {
+      else if (letter === 'C' && word[i+1] !== 'H') {
         if(word[i+1] === 'A' || 
           word[i+1] === 'O'  ||
           word[i+1] === 'U'  ||
@@ -24,16 +28,19 @@ module.exports = {
           i === 0) {
             coding += 'K'
         }
-        if(i === 1 && (
+        else if(i === 1 && (
           word[i+1] === 'E' ||
           word[i+1] === 'I' ||
           word[i+1] === 'Y'
         )) {
             coding += 'S'
         }
+        else {
+          coding += letter
+        }
       }
       // Rule set CH
-      if (letter === 'C' && word[i+1] === 'H') {
+      else if (letter === 'C' && word[i+1] === 'H') {
         if(word[i+2] === 'R' ||
           word[i+2] === 'S'  ||
           word[i+2] === 'T') {
@@ -41,7 +48,7 @@ module.exports = {
           }
       }
       // Rule set D
-      if (letter === 'D') {
+      else if (letter === 'D') {
         if (word[i+1] === 'J' || word[i+1] === 'T') {
           continue
         } else {
@@ -49,7 +56,7 @@ module.exports = {
         }
       }
       // Rule set F
-      if (letter === 'F') {
+      else if (letter === 'F') {
         if((word[i-1] === 'A' ||
           word[i-1] === 'E'  ||
           word[i-1] === 'I'  ||
@@ -74,10 +81,13 @@ module.exports = {
           word[i+1] === 'V')
         ) {
           coding += 'V'
-        } 
+        }
+        else {
+          coding += letter
+        }
       }
       // Rule set G
-      if (letter === 'G') {
+      else if (letter === 'G') {
         if((word[i-1] === 'R') ||
           (i-1 === 0 && word[i+1] === 'E' ||
           word[i+1] === 'I' || 
@@ -85,6 +95,31 @@ module.exports = {
           word[i+1] === 'Ö' )) {
             coding += 'J'
           }
+          else {
+            coding += letter
+          }
+          
+      }
+      // Rule set H
+      else if (letter === 'H') {
+        if (word[i-1] === 'T') {
+          continue
+        }
+        else if (i === 0 || function() {
+          for (var k = 0; k < consonants.length; k++) {
+            if (consonants[k] == word[i+1]) {
+              return true
+            }
+          }
+        }) {
+          continue
+        }
+        else {
+          coding += letter
+        }
+      }
+      else {
+        coding += letter
       }
     }
 

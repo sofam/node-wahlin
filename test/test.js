@@ -3,45 +3,57 @@ var wahlin = require('../index.js')
 
 describe("encode() C rules", function () {
   it('Encodes Ca to K', function () {
-    assert.equal('K',wahlin.encode('Ca'))
+    assert.equal('KA',wahlin.encode('Ca'))
   })
   it('Encodes Co to K', function () {
-    assert.equal('K',wahlin.encode('Co'))
+    assert.equal('KO',wahlin.encode('Co'))
   }) 
   it('Encodes Ace to S', function () {
-    assert.equal('S',wahlin.encode('Ace'))
+    assert.equal('ASE',wahlin.encode('Ace'))
   })
 })
 
 describe("encode() CH rules", function () {
   it('Encodes Chr to K', function () {
-    assert.equal('K',wahlin.encode('Chr'))
+    assert.equal('KR',wahlin.encode('Chr'))
   })
 })
 
 describe("encode() D rules", function () {
   it('Encodes Ddt to D', function () {
-    assert.equal('D',wahlin.encode('Ddt'))
+    assert.equal('DT',wahlin.encode('Ddt'))
   })
 })
 
 describe("encode() F rules", function () {
   it('Encodes Af to V', function () {
-    assert.equal('V',wahlin.encode('Af'))
+    assert.equal('AV',wahlin.encode('Af'))
   })
   it('Encodes Fa to V', function () {
-    assert.equal('V',wahlin.encode('Fa'))
+    assert.equal('VA',wahlin.encode('Fa'))
   })
   it('Encodes zFb to V', function () {
-    assert.equal('V',wahlin.encode('zFb'))
+    assert.equal('ZVB',wahlin.encode('zFb'))
   })
 })
 
 describe("encode() G rules", function () {
   it('Encodes Rg to J', function () {
-    assert.equal('J',wahlin.encode('Rg'))
+    assert.equal('RJ',wahlin.encode('Rg'))
   })
   it('Encodes vRe to J', function () {
-    assert.equal('J',wahlin.encode('vRg'))
+    assert.equal('VRJ',wahlin.encode('vRg'))
+  })
+})
+
+describe("encode() H rules", function () {
+  it('Encodes Ath to AT', function () {
+    assert.equal('AT',wahlin.encode('Ath'))
+  })
+  it('Encodes HA to A', function () {
+    assert.equal('A',wahlin.encode('HA'))
+  })
+  it('Encodes HB to B', function () {
+    assert.equal('B',wahlin.encode('HB'))
   })
 })

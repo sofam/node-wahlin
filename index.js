@@ -146,6 +146,33 @@ module.exports = {
           coding += letter
         }
       }
+      // Rule set K
+      else if (letter === 'K' && word[i+1] !== 'J') {
+        if (i-1 === 0 && (word[i+1] === 'E' ||
+                          word[i+1] === 'I' ||
+                          word[i+1] === 'Y' ||
+                          word[i+1] === 'Ö')) {
+                            coding += '+'
+                          }
+        else {
+          coding += letter
+        }
+      }
+      // Rule set KJ
+      else if (letter === 'K' && word[i+1] === 'J') {
+        if (i-1 === 0) {
+          coding += '+'
+        }
+      }
+      // Rule set L
+      else if (letter === 'L') {
+        if (word[i+1] === 'J') {
+          continue
+        }
+        else {
+          coding += letter
+        }
+      }
       else {
         coding += letter
       }

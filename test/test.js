@@ -69,3 +69,21 @@ describe("encode() I rules", function () {
     assert.equal('JY',wahlin.encode('Iy'))
   })
 })
+
+describe("encode() K rules", function () {
+  it('Encodes Sket to S+ET', function () {
+    assert.equal('S+ET',wahlin.encode('Sket'))
+  })
+})
+
+describe("encode() KJ rules", function () {
+  it('Encodes Skjut to S+UT', function () {
+    assert.equal('S+JUT',wahlin.encode('Skjut'))
+  })
+})
+
+describe("encode() K rules", function () {
+  it('Encodes Ljug to JUG', function () {
+    assert.equal('JUG',wahlin.encode('Ljug'))
+  })
+})

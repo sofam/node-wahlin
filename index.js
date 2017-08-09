@@ -76,6 +76,16 @@ module.exports = {
           coding += 'V'
         } 
       }
+      // Rule set G
+      if (letter === 'G') {
+        if((word[i-1] === 'R') ||
+          (i-1 === 0 && word[i+1] === 'E' ||
+          word[i+1] === 'I' || 
+          word[i+1] === 'Y' || 
+          word[i+1] === 'Ö' )) {
+            coding += 'J'
+          }
+      }
     }
 
     // Return coding

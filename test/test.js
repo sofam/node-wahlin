@@ -36,3 +36,12 @@ describe("encode() F rules", function () {
     assert.equal('V',wahlin.encode('zFb'))
   })
 })
+
+describe("encode() G rules", function () {
+  it('Encodes Rg to J', function () {
+    assert.equal('J',wahlin.encode('Rg'))
+  })
+  it('Encodes vRe to J', function () {
+    assert.equal('J',wahlin.encode('vRg'))
+  })
+})

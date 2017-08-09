@@ -160,9 +160,9 @@ module.exports = {
       }
       // Rule set KJ
       else if (letter === 'K' && word[i+1] === 'J') {
-        //if (i-1 === 0) { // This might be needed but I don't know for certain yet, write the full ruleset and then test it
+        if (i-1 === 0) { // This might be needed but I don't know for certain yet, write the full ruleset and then test it
           coding += '+'
-        //}
+        }
       }
       // Rule set L
       else if (letter === 'L') {
@@ -186,10 +186,81 @@ module.exports = {
       else if (letter === 'Q') {
         if (word[i+1] === 'U') {
           coding += 'KV'
+          i += 1
         }
         else {
           coding += 'K'
         }
+      }
+      // Rule set SJ, SCH, STJ, SKJ, SK
+      else if (letter === 'S') {
+        if (word[i+1] === 'J') {
+          coding += '*'
+          i += 1
+        }
+        else if (word[i+1] === 'C' && word[i+2] === 'H') {
+          coding += '*'
+          i += 2
+        }
+        else if (word[i+1] === 'T' && word[i+2] === 'J') {
+          coding += '*'
+          i += 2
+        }
+        else if (word[i+1] === 'K' && word[i+2] === 'J') {
+          coding += '*'
+          i += 2
+        }
+        else if (word[i+1] === 'K' && word[i+2] === 'Ö') {
+          coding += '*'
+          i += 1
+        }
+        else if (word[i+1] === 'K' && word[i+2] === 'E') {
+          coding += '*'
+          i += 1
+        }
+        else if (word[i+1] === 'K' && word[i+2] === 'I') {
+          coding += '*'
+          i += 1
+        }
+        else if (word[i+1] === 'K' && word[i+2] === 'Y') {
+          coding += '*'
+          i += 1
+        }
+        else {
+          coding += letter
+        }                                         
+      }
+      // Rule set TJ
+      else if (letter === 'T' && word[i+1] === 'J' && i === 0) {
+        coding += '+'
+      }
+      // Rule set U
+      else if (letter === 'U' && word[i-1] === 'O') {
+        continue
+      }
+      // Rule set W
+      else if (letter === 'W') {
+        coding += 'V'
+      }
+      // Rule set X
+      else if (letter === 'X') {
+        coding += 'KS'
+      }
+      // Rule set Y
+      else if (letter === 'Y' && (word[i-1] == 'A' || word[i-1] == 'E' || word[i-1] == 'O' || word[i-1] == 'U')) {
+        coding += 'J'
+      }
+      // Rule set Z
+      else if (letter === 'Z') {
+        coding += 'S'
+      }
+      // Rule set Å
+      else if (letter === 'Å' && (word[i+1] === 'V' || (word[i+1] === 'N' && word[i+2] === 'G'))) {
+        coding += 'O'
+      }
+      // Rule set Ä
+      else if (letter === 'Ä') {
+        coding += 'E'
       }
       else {
         coding += letter

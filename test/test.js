@@ -29,11 +29,11 @@ describe("encode() F rules", function () {
   it('Encodes Af to V', function () {
     assert.equal('AV',wahlin.encode('Af'))
   })
-  it('Encodes Fa to V', function () {
+  it('Encodes Fa to VA', function () {
     assert.equal('VA',wahlin.encode('Fa'))
   })
-  it('Encodes zFb to V', function () {
-    assert.equal('ZVB',wahlin.encode('zFb'))
+  it('Encodes zFb to SVB', function () {
+    assert.equal('SVB',wahlin.encode('zFb'))
   })
 })
 
@@ -71,14 +71,14 @@ describe("encode() I rules", function () {
 })
 
 describe("encode() K rules", function () {
-  it('Encodes Sket to S+ET', function () {
-    assert.equal('S+ET',wahlin.encode('Sket'))
+  it('Encodes Skita to *+ITA', function () {
+    assert.equal('*ITA',wahlin.encode('Skita'))
   })
 })
 
 describe("encode() KJ rules", function () {
-  it('Encodes skalkeskjulet to SKALKES+JULET', function () {
-    assert.equal('SKALKES+JULET',wahlin.encode('skalkeskjulet'))
+  it('Encodes skalkeskjulet to SKALKE*JULET', function () {
+    assert.equal('SKALKE*ULET',wahlin.encode('skalkeskjulet'))
   })
 })
 
@@ -95,10 +95,31 @@ describe("encode() PH rules", function () {
 })
 
 describe("encode() Q and QU rules", function () {
-  it('Encodes Quinoa to KVUINOA', function () {
-    assert.equal('KVUINOA',wahlin.encode('Quinoa'))
+  it('Encodes Quinoa to KVINOA', function () {
+    assert.equal('KVINOA',wahlin.encode('Quinoa'))
   })
-  it('Encodes Quiz to KVUIZ', function () {
-    assert.equal('KVUIZ',wahlin.encode('Quiz'))
+  it('Encodes Quiz to KVIS', function () {
+    assert.equal('KVIS',wahlin.encode('Quiz'))
+  })
+})
+
+describe("encode() SJ, SCH, STJ, SKJ, SKÖ, SKE, SKI, SKY rules", function () {
+  it('Encodes Själ to *EL', function () {
+    assert.equal('*EL',wahlin.encode('Själ'))
+  })
+  it('Encodes Stjärna to *ERNA', function () {
+    assert.equal('*ERNA',wahlin.encode('Stjärna'))
+  })
+  it('Encodes Sköterska to *ÖTERSKA', function () {
+    assert.equal('*ÖTERSKA',wahlin.encode('Sköterska'))
+  })
+  it('Encodes Skidor to *IDOR', function () {
+    assert.equal('*IDOR',wahlin.encode('Skidor'))
+  })
+  it('Encodes Sked to *ED', function () {
+    assert.equal('*ED',wahlin.encode('Sked'))
+  })
+  it('Encodes Schema to *EMA', function () {
+    assert.equal('*EMA',wahlin.encode('Schema'))
   })
 })

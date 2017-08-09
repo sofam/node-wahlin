@@ -82,8 +82,23 @@ describe("encode() KJ rules", function () {
   })
 })
 
-describe("encode() K rules", function () {
+describe("encode() L rules", function () {
   it('Encodes Ljug to JUG', function () {
     assert.equal('JUG',wahlin.encode('Ljug'))
+  })
+})
+
+describe("encode() PH rules", function () {
+  it('Encodes Philadelphia to FILADELFJA', function () {
+    assert.equal('FILADELFJA',wahlin.encode('Philadelphia'))
+  })
+})
+
+describe("encode() Q and QU rules", function () {
+  it('Encodes Quinoa to KVUINOA', function () {
+    assert.equal('KVUINOA',wahlin.encode('Quinoa'))
+  })
+  it('Encodes Quiz to KVUIZ', function () {
+    assert.equal('KVUIZ',wahlin.encode('Quiz'))
   })
 })

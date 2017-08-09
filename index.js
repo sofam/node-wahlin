@@ -160,7 +160,7 @@ module.exports = {
       }
       // Rule set KJ
       else if (letter === 'K' && word[i+1] === 'J') {
-        //if (i-1 === 0) {
+        //if (i-1 === 0) { // This might be needed but I don't know for certain yet, write the full ruleset and then test it
           coding += '+'
         //}
       }
@@ -171,6 +171,24 @@ module.exports = {
         }
         else {
           coding += letter
+        }
+      }
+      // Rule set PH
+      else if (letter === 'P') {
+        if (word[i+1] === 'H') {
+          coding += 'F'
+        }
+        else {
+          coding += letter
+        }
+      }
+      // Rule set QU and Q
+      else if (letter === 'Q') {
+        if (word[i+1] === 'U') {
+          coding += 'KV'
+        }
+        else {
+          coding += 'K'
         }
       }
       else {

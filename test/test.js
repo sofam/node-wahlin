@@ -13,7 +13,6 @@ describe("encode() C rules", function () {
   })
 })
 
-
 describe("encode() CH rules", function () {
   it('Encodes Chr to K', function () {
     assert.equal('K',wahlin.encode('Chr'))

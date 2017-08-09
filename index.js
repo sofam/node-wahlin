@@ -146,7 +146,7 @@ module.exports = {
       }
       // Rule set K
       else if (letter === 'K' && word[i+1] !== 'J') {
-        if (i-1 === 0 && (word[i+1] === 'E' ||
+        if (i === 0 && (word[i+1] === 'E' ||
                           word[i+1] === 'I' ||
                           word[i+1] === 'Y' ||
                           word[i+1] === 'Ö')) {

@@ -68,6 +68,12 @@ describe("encode() K rules", function () {
   it('Encodes Skita to *ITA', function () {
     assert.equal('*ITA',wahlin.encode('Skita'))
   })
+  it('Encodes Kemi to KEMI', function () {
+    assert.equal('+EMI',wahlin.encode('Kemi'))
+  })
+  it('Encodes Körkort to KÖRKORT', function () {
+    assert.equal('+ÖRKORT',wahlin.encode('Körkort'))
+  })
 })
 
 describe("encode() KJ rules", function () {

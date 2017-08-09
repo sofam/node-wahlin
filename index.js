@@ -102,16 +102,14 @@ module.exports = {
       }
       // Rule set H
       else if (letter === 'H') {
+        var matchingConsonants = consonants.filter(function(val) {
+          if(val === word[i+1]) return true
+        })
+        
         if (word[i-1] === 'T') {
           continue
         }
-        else if (i === 0 || function() {
-          for (var k = 0; k < consonants.length; k++) {
-            if (consonants[k] == word[i+1]) {
-              return true
-            }
-          }
-        }) {
+        else if (matchingConsonants.length) {
           continue
         }
         else {
@@ -177,6 +175,7 @@ module.exports = {
       else if (letter === 'P') {
         if (word[i+1] === 'H') {
           coding += 'F'
+          i += 1
         }
         else {
           coding += letter

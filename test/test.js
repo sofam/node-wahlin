@@ -50,17 +50,11 @@ describe("encode() H rules", function () {
   it('Encodes Hand to HAND', function () {
     assert.equal('HAND',wahlin.encode('Hand'))
   })
-  it('Encodes HA to A', function () {
-    assert.equal('A',wahlin.encode('HA'))
-  })
-  it('Encodes HB to B', function () {
-    assert.equal('B',wahlin.encode('HB'))
-  })
 })
 
 describe("encode() I rules", function () {
   it('Encodes Hie to HJE', function () {
-    assert.equal('JE',wahlin.encode('Hie'))
+    assert.equal('HJE',wahlin.encode('Hie'))
   })
   it('Encodes Ei to Ej', function () {
     assert.equal('EJ',wahlin.encode('Ei'))

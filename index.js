@@ -1,6 +1,6 @@
 
 
-modules.export = {
+module.exports = {
   // Wåhlin encode word
   encode: function(word) {
     word = word.toUpperCase()
@@ -14,7 +14,7 @@ modules.export = {
         }
       }
       // Rule set C
-      if (letter === 'C') {
+      if (letter === 'C' && word[i+1] !== 'H') {
         if(word[i+1] === 'A' || 
           word[i+1] === 'O'  ||
           word[i+1] === 'U'  ||
@@ -34,9 +34,9 @@ modules.export = {
       }
       // Rule set CH
       if (letter === 'C' && word[i+1] === 'H') {
-        if(word[i+2] === R ||
-          word[i+2] === S  ||
-          word[i+2] === T) {
+        if(word[i+2] === 'R' ||
+          word[i+2] === 'S'  ||
+          word[i+2] === 'T') {
             coding += 'K'
           }
       }
@@ -47,5 +47,8 @@ modules.export = {
         }
       }
     }
+
+    // Return coding
+    return coding
   }
 }

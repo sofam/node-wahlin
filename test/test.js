@@ -57,3 +57,15 @@ describe("encode() H rules", function () {
     assert.equal('B',wahlin.encode('HB'))
   })
 })
+
+describe("encode() I rules", function () {
+  it('Encodes Hie to HJE', function () {
+    assert.equal('JE',wahlin.encode('Hie'))
+  })
+  it('Encodes Ei to Ej', function () {
+    assert.equal('EJ',wahlin.encode('Ei'))
+  })
+  it('Encodes Iy to JY', function () {
+    assert.equal('JY',wahlin.encode('Iy'))
+  })
+})

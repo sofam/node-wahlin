@@ -118,6 +118,34 @@ module.exports = {
           coding += letter
         }
       }
+      // Rule set I
+      else if (letter === 'I') {
+        if (word[i-1] === 'H' && 
+          (word[i+1] === 'A' ||
+           word[i+1] === 'E' || 
+           word[i+1] === 'O' || 
+           word[i+1] === 'U' || 
+           word[i+1] === 'Y' ||
+           word[i+1] === 'Å' || 
+           word[i+1] === 'Ö')) {
+             coding += 'J'
+           }
+        else if (word[i-1] === 'A' ||
+                 word[i-1] === 'E' ||
+                 word[i-1] === 'O' ||
+                 word[i-1] === 'Ö') {
+                   coding += 'J'
+                 }
+        else if (word[i+1] === 'E' ||
+                 word[i+1] === 'O' ||
+                 word[i+1] === 'Y' ||
+                 word[i+1] === 'Ö') {
+                   coding += 'J'
+                 }
+        else {
+          coding += letter
+        }
+      }
       else {
         coding += letter
       }

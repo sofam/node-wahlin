@@ -74,6 +74,9 @@ describe("encode() K rules", function () {
   it('Encodes Körkort to KÖRKORT', function () {
     assert.equal('+ÖRKORT',wahlin.encode('Körkort'))
   })
+  it('Encodes Krossa to KROSSA', function () {
+    assert.equal('KROSSA',wahlin.encode('Krossa'))
+  })
 })
 
 describe("encode() KJ rules", function () {

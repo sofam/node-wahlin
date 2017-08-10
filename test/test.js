@@ -95,6 +95,9 @@ describe("encode() PH rules", function () {
   it('Encodes Philadelphia to FILADELFJA', function () {
     assert.equal('FILADELFJA',wahlin.encode('Philadelphia'))
   })
+  it('Encodes Upphettningen to UPPHETTNINGEN', function() {
+    assert.equal('UPPHETTNINGEN',wahlin.encode('Upphettningen'))
+  })
 })
 
 describe("encode() Q and QU rules", function () {

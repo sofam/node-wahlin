@@ -173,7 +173,7 @@ module.exports = {
       }
       // Rule set PH
       else if (letter === 'P') {
-        if (word[i+1] === 'H') {
+        if (word[i+1] === 'H' && word[i-1] !== 'P') {
           coding += 'F'
           i += 1
         }

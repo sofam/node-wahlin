@@ -24,11 +24,10 @@ module.exports = {
           word[i+1] === 'U'  ||
           word[i+1] === 'L'  ||
           word[i+1] === 'S'  ||
-          word[i+1] === 'R'  ||
-          i === 0) {
+          word[i+1] === 'R') {
             coding += 'K'
         }
-        else if(i === 1 && (
+        else if((
           word[i+1] === 'E' ||
           word[i+1] === 'I' ||
           word[i+1] === 'Y'

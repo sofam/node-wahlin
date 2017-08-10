@@ -11,6 +11,9 @@ describe("encode() C rules", function () {
   it('Encodes Ace to S', function () {
     assert.equal('ASE',wahlin.encode('Ace'))
   })
+  it('Encodes Censorn to SENSORN', function () {
+    assert.equal('SENSORN',wahlin.encode('Censorn'))
+  })
 })
 
 describe("encode() CH rules", function () {

@@ -86,6 +86,9 @@ describe("encode() KJ rules", function () {
   it('Encodes skalkeskjulet to SKALKE*JULET', function () {
     assert.equal('SKALKE*ULET',wahlin.encode('skalkeskjulet'))
   })
+  it('Encodes kjol to +OL', function () {
+    assert.equal('+OL',wahlin.encode('kjol'))
+  })
 })
 
 describe("encode() L rules", function () {

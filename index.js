@@ -156,10 +156,9 @@ module.exports = {
         }
       }
       // Rule set KJ
-      else if (letter === 'K' && word[i+1] === 'J') {
-        if (i-1 === 0) { // This might be needed but I don't know for certain yet, write the full ruleset and then test it
+      else if (letter === 'K' && word[i+1] === 'J' ) {
           coding += '+'
-        }
+          i += 1
       }
       // Rule set L
       else if (letter === 'L') {
